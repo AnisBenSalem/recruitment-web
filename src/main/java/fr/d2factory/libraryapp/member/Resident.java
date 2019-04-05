@@ -21,7 +21,7 @@ public class Resident extends Member {
             amountToPay = (Constant.FEES_PER_DAY * Constant.RESIDENT_MAX_LIMIT_DAYS
                     + ((Constant.RESIDENT_MAJOR_FEES) * (nbrDays - Constant.RESIDENT_MAX_LIMIT_DAYS)));
         if(amountToPay > wallet){
-            throw new InsufficientWalletBalanceException("Insuficient balance to pay");
+            throw new InsufficientWalletBalanceException(Constant.INSUFFICIENT_BALANCE);
         }
         return amountToPay;
     }

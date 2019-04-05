@@ -21,7 +21,7 @@ public class StudentWithLess1Year extends Member {
             amountToPay =  (Constant.FEES_PER_DAY * (Constant.STUDENT_MAX_LIMIT_DAYS - Constant.STUDENT_FIRST_YEAR_INITIAL_FREE_DAYS)) +
                     ( Constant.STUDENT_MAJOR_FEES * (nbrDays - Constant.STUDENT_MAX_LIMIT_DAYS));
         if(amountToPay > wallet){
-            throw new InsufficientWalletBalanceException("Insufficient balance to pay");
+            throw new InsufficientWalletBalanceException(Constant.INSUFFICIENT_BALANCE);
         }
         return amountToPay;
     }
