@@ -1,6 +1,9 @@
 package fr.d2factory.libraryapp.member;
 
 import fr.d2factory.libraryapp.library.Library;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDate;
 
@@ -8,6 +11,8 @@ import java.time.LocalDate;
  * A member is a person who can borrow and return books to a {@link Library}
  * A member can be either a student or a resident
  */
+@Getter
+@Setter
 public abstract class Member {
     /**
      * An initial sum of money the member has
@@ -30,11 +35,4 @@ public abstract class Member {
      */
     public abstract int getDelayOfReturnBook();
 
-    public float getWallet() {
-        return wallet;
-    }
-
-    public void setWallet(float wallet) {
-        this.wallet = wallet;
-    }
 }
